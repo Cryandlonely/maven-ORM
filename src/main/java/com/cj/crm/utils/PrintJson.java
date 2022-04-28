@@ -1,4 +1,4 @@
-package com.lixingyuan.crm.utils;
+package com.cj.crm.utils;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -37,22 +37,6 @@ public class  PrintJson {
 	
 	//将对象解析为json串
 	public static void printJsonObj(HttpServletResponse response,Object obj){
-		
-		/*
-		 * 
-		 * Person p
-		 * 	id name age
-		 * {"id":"?","name":"?","age":?}
-		 * 
-		 * List<Person> pList
-		 * [{"id":"?","name":"?","age":?},{"id":"?","name":"?","age":?},{"id":"?","name":"?","age":?}...]
-		 * 
-		 * Map
-		 * 	key value
-		 * {key:value}
-		 * 
-		 * 
-		 */
 		
 		ObjectMapper om = new ObjectMapper();
 		try {

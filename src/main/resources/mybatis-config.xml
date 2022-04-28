@@ -7,7 +7,7 @@
     <properties resource="db.properties"/>
 
     <typeAliases>
-        <package name="com.lixingyuan.crm.setings.dao.UserDao"/>
+        <package name="com.cj.crm.settings.dao.UserDao"/>
     </typeAliases>
 
     <environments default="development">

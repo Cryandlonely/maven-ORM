@@ -1,4 +1,4 @@
-package com.lixingyuan.crm.setings.domain;
+package com.cj.crm.settings.domain;
 
 public class User {
     private String id;

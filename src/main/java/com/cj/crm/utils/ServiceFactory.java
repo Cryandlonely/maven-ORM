@@ -1,4 +1,4 @@
-package com.lixingyuan.crm.utils;
+package com.cj.crm.utils;
 
 public class ServiceFactory {
 	

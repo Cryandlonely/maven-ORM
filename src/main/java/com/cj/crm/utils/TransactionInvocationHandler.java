@@ -1,4 +1,4 @@
-package com.lixingyuan.crm.utils;
+package com.cj.crm.utils;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -34,7 +34,7 @@ public class TransactionInvocationHandler implements InvocationHandler{
 			e.printStackTrace();
 			
 			//处理的是什么异常，继续往上抛什么异常
-			//throw e.getCause();
+			throw e.getCause();
 		}finally{
 			SqlSessionUtil.myClose(session);
 		}
