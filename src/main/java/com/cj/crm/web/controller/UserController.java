@@ -27,21 +27,28 @@ public class UserController extends HttpServlet {
     }
 
     private void login(HttpServletRequest request, HttpServletResponse response) {
-        String loginName = request.getParameter("loginAct");
+
+        String loginAct = request.getParameter("loginAct");
         String loginPwd = MD5Util.getMD5(request.getParameter("loginPwd"));
         String ip = request.getRemoteAddr();
+
         UserService us = (UserService) ServiceFactory.getService(new UserServiceImpl());
+
         try{
-            User user = us.login(loginName,loginPwd,ip);
+
+            User user = us.login(loginAct,loginPwd,ip);
             request.getSession().setAttribute("user",user);
             PrintJson.printJsonFlag(response,true);
+
         }catch (Exception e){
+
             e.printStackTrace();
             String msg = e.getMessage();
             Map<String,Object> map = new HashMap<>();
             map.put("success",false);
             map.put("msg",msg);
             PrintJson.printJsonObj(response,map);
+
         }
     }
 }

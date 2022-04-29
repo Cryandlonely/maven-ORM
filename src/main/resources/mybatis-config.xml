@@ -7,7 +7,7 @@
     <properties resource="db.properties"/>
 
     <typeAliases>
-        <package name="com.cj.crm.settings.dao.UserDao"/>
+        <package name="com.cj.crm.settings.domain"/>
     </typeAliases>
 
     <environments default="development">
@@ -23,7 +23,7 @@
     </environments>
 
     <mappers>
-        <package name="com/lixingyuan/crm/setings/dao"/>
+        <package name="com.cj.crm.settings.dao"/>
     </mappers>
 </configuration>
 

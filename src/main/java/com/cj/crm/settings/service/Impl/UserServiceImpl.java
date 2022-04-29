@@ -4,8 +4,6 @@ import com.cj.crm.Exception.loginException;
 import com.cj.crm.settings.dao.UserDao;
 import com.cj.crm.settings.domain.User;
 import com.cj.crm.settings.service.UserService;
-import com.cj.crm.utils.DateTimeUtil;
-import com.cj.crm.utils.SqlSessionUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,10 +11,9 @@ import java.util.Map;
 public class UserServiceImpl implements UserService {
     private UserDao userDao = SqlSessionUtil.getSqlSession().getMapper(UserDao.class);
 
-    @Override
     public User login(String loginName, String loginPwd, String ip) throws loginException {
         Map<String, String> map = new HashMap<>();
-        map.put("loginName",loginName);
+        map.put("loginAct",loginName);
         map.put("loginPwd",loginPwd);
 
         User user = userDao.login(map);

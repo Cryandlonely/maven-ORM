@@ -106,8 +106,8 @@
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.1</version>
         <configuration>
-          <!-- <port>8080</port> -->
-          <path>/maven_ORM/index.html</path>
+           <port>8080</port>
+          <path>/mavenORM/index.html</path>
           <uriEncoding>UTF-8</uriEncoding>
           <server>tomcat7</server>
         </configuration>
